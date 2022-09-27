@@ -4,7 +4,7 @@
   <test thread-count="5" name="Test">
   <parameter name="browser" value="chrome"></parameter>
     <classes>
-      <class name="com.regmovies.qa.tests.HomePageTest"/>
+      <class name="com.regmovies.qa.tests.PromoPageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

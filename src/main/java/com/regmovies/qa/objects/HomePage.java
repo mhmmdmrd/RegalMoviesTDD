@@ -30,6 +30,12 @@ public class HomePage {
 	@FindBy(xpath = "//h2[text()='Coming Soon']")
 	WebElement comingSoonElement;
 	
+	@FindBy(xpath = "//a[@title='Current Promotions']")
+	WebElement promoElement;
+	
+	@FindBy(css = "img.user-icon")
+	WebElement userIconElement;
+	
 	private void getPageTitle(String expectedTitle) {
 		assertEquals(commons.getTitle(driver), expectedTitle);
 		//Movie Showtimes &amp; Movie Tickets | Regal Theatres
@@ -47,11 +53,30 @@ public class HomePage {
 		assertEquals(commons.getText(comingSoonElement), expectedText2);
 	}
 	
+	private void clickPromo() {
+		commons.click(promoElement);
+	}
+	
+	private void clickUserIcon() {
+		commons.click(userIconElement);
+	}
+	
 	public void homePageSteps(String expectedTitle, String expectedText1, String expectedText2) {
 		getPageTitle(expectedTitle);
 		verifyLogo();
 		verifyNowPlayingText(expectedText1);
 		verifyComingSoonText(expectedText2);
+	}
+	
+	public void homePromoStep() {
+		verifyLogo();
+		clickPromo();
+	}
+	
+	public void homeLogInStep() {
+		verifyLogo();
+		clickUserIcon();
+		
 	}
 	
 	

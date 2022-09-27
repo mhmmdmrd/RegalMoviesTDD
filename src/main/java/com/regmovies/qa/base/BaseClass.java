@@ -21,6 +21,8 @@ import com.aventstack.extentreports.Status;
 import com.regmovies.qa.commons.CommonFunctions;
 import com.regmovies.qa.commons.CommonWaits;
 import com.regmovies.qa.objects.HomePage;
+import com.regmovies.qa.objects.LogInPage;
+import com.regmovies.qa.objects.PromoPage;
 import com.regmovies.qa.reportings.ExtentManager;
 import com.regmovies.qa.reportings.ExtentTestManager;
 import com.regmovies.qa.utils.Configuration;
@@ -37,6 +39,8 @@ public Configuration configuration = Configuration.getInstance();
 	
 	protected CommonFunctions commons;
 	protected HomePage homePage;
+	protected PromoPage promoPage;
+	protected LogInPage logInPage;
 	
 	@BeforeSuite
 	public void initiatingReport() {
@@ -101,6 +105,8 @@ public Configuration configuration = Configuration.getInstance();
 		waits = new CommonWaits(wait);
 		commons = new CommonFunctions(driver, waits);
 		homePage = new HomePage(driver, commons);
+		promoPage = new PromoPage(driver, commons);
+		logInPage = new LogInPage(driver, commons);
 		
 	}
 	
