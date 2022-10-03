@@ -2,6 +2,9 @@ package com.regmovies.qa.objects;
 
 import static org.testng.Assert.assertEquals;
 
+import java.util.Map;
+
+import static com.regmovies.qa.utils.DataMap.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -78,6 +81,15 @@ public class LogInPage {
 		inputPassword(logData.getPassWord());
 		clickLogIn();
 		verifyError(logData.getErrorMsg());
+	}
+	
+	public void logInWithBadCredentials(Map<String, String> map) {
+		verifyPageTitle(map.get(Title.name()));
+		verifyHeader(map.get(Header.name()));
+		inputEmail(map.get(Email.name()));
+		inputPassword(map.get(Password.name()));
+		clickLogIn();
+		verifyError(map.get(ErrorMsg.getValue()));
 	}
 
 }
