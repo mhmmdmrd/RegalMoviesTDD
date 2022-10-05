@@ -7,6 +7,8 @@ import java.util.Properties;
 
 public class Configuration {
 
+	
+	//Study more
 	private static Configuration configuration;
 	private Properties properties;
 	private final String defaultPath = "configuration/config.properties";
