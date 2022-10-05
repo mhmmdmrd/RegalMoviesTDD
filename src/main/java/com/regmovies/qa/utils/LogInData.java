@@ -2,6 +2,8 @@ package com.regmovies.qa.utils;
 
 public class LogInData {
 	
+	//encap learn data hiding
+	
 	private String expectedTitle; 
 	private String expectedHeader;
 	private String email;
