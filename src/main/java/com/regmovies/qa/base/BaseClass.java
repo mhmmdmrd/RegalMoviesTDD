@@ -37,6 +37,7 @@ public Configuration configuration = Configuration.getInstance();
 	CommonWaits waits;
 	ExtentReports extent;
 	
+	// learn more
 	protected CommonFunctions commons;
 	protected HomePage homePage;
 	protected PromoPage promoPage;
